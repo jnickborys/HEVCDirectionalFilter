@@ -1,0 +1,26 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>videnc</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>VC</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>videnc</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="videnc.vcxproj" File="videnc.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName="arith.cpp">arith.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="bits.cpp">bits.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="quant.cpp">quant.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="vidcodeclib.cpp">vidcodeclib.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="videnc.cpp">videnc.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="xform.cpp">xform.cpp</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
