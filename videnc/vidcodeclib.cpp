@@ -34,6 +34,11 @@ ICodec::ICodec(unsigned w, unsigned h)
   _udataRef = new float *[_h2];
   _vdataRef = new float *[_h2];
 
+  // Upsampled Data
+  _ydataUp = new float *[_h * 16];
+  _udataUp = new float *[_h2 * 16];
+  _vdataUp = new float *[_h2 * 16];
+  
   SetFrameBufPointer(m_pfFrameBuf[0], m_pfFrameBuf[1]);
 
   //MV buffer
@@ -378,7 +383,10 @@ int IEncoder::codeImage(
 
   if (!bIsIFrame) {
       //P frames: motion est, find prediction error
-      MotionEst();
+
+	  AdaptiveInterpolationFilter();
+
+	  MotionEst();
 
       EncodeMV();
 
@@ -586,6 +594,25 @@ int IEncoder::GetSAD(
 		}
 
     return iSAD;
+}
+
+
+/*
+	Upsamples the Image and the applies a filter
+
+	Image size is increased by 16x
+*/
+void IEncoder::AdaptiveInterpolationFilter()
+{
+	// Upsample by 2
+
+	// apply filter h1
+	// Upsample by 2
+	// apply filter h1
+	// upsample by 4
+	// apply filter h2
+	
+	return ;
 }
 
 //custom DAIF (directional adaptive interpolation filter) function

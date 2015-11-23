@@ -40,6 +40,8 @@ class ICodec
   float **_ydata, **_udata, **_vdata;
   float **_ydataRef, **_udataRef, **_vdataRef;
 
+  float **_ydataUp, **_udataUp, **_vdataUp;
+
   int **m_iMVy, **m_iMVx;
 
   float *m_fBlkBuf[BLOCKSIZE];
@@ -74,6 +76,7 @@ class IEncoder:public ICodec
     int iMVx,
     int iMAD0);
 
+  void AdaptiveInterpolationFilter();
   void DAIF(); //custom function added for project
 
   void EncodeMV();
