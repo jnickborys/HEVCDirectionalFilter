@@ -41,6 +41,7 @@ class ICodec
   float **_ydataRef, **_udataRef, **_vdataRef;
 
   float **_ydataUp, **_udataUp, **_vdataUp;
+  float **_ydata_Y, **_udata_Y, **_vdata_Y;
 
   int **m_iMVy, **m_iMVx;
 
@@ -77,6 +78,7 @@ class IEncoder:public ICodec
     int iMAD0);
 
   void AdaptiveInterpolationFilter();
+  void ComputeFilterCoefficients();
   void DAIF(); //custom function added for project
 
   void EncodeMV();

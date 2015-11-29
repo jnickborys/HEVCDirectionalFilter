@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="arith.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="bits.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="quant.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="vidcodeclib.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="videnc.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="xform.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="adaptive_filter.c">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="includes">
+      <UniqueIdentifier>{448e73ae-b0c9-4c3b-ba44-2c45af8042d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{ec097e77-e537-43a9-a2fc-0d018a2dd2e1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="arith.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="bits.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="codeclib.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="quant.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="xform.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptive_filter.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="memalloc.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="defines.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="mbuffer.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="header.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

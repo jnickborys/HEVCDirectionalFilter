@@ -121,6 +121,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="adaptive_filter.c" />
     <ClCompile Include="arith.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -169,6 +170,20 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="adaptive_filter.h" />
+    <ClInclude Include="arith.h" />
+    <ClInclude Include="bits.h" />
+    <ClInclude Include="codeclib.h" />
+    <ClInclude Include="defines.h" />
+    <ClInclude Include="global.h" />
+    <ClInclude Include="header.h" />
+    <ClInclude Include="mbuffer.h" />
+    <ClInclude Include="memalloc.h" />
+    <ClInclude Include="quant.h" />
+    <ClInclude Include="vlc.h" />
+    <ClInclude Include="xform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

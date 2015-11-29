@@ -158,6 +158,8 @@ void ICodec::GetReconstructedFrame()
 }
 
 
+
+
 void ICodec::GetBlockRecon(
     float **pfCurrFrame,    
     float **pfRefFrame,     
@@ -384,7 +386,7 @@ int IEncoder::codeImage(
   if (!bIsIFrame) {
       //P frames: motion est, find prediction error
 
-	  AdaptiveInterpolationFilter();
+	  //AdaptiveInterpolationFilter();
 
 	  MotionEst();
 
@@ -613,6 +615,20 @@ void IEncoder::AdaptiveInterpolationFilter()
 	// apply filter h2
 	
 	return ;
+}
+
+void ComputeWienerHopfEqn()
+{
+	// For a 6 Tap Filter
+	for (int t = 0; t < 6; ++t)
+	{
+
+	}
+}
+
+void IEncoder::ComputeFilterCoefficients()
+{
+	return;
 }
 
 //custom DAIF (directional adaptive interpolation filter) function
