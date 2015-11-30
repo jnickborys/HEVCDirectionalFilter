@@ -34,14 +34,14 @@ typedef unsigned char byte;    //!< byte type definition
 
 #ifdef ADAPTIVE_FILTER
 #define AIF_BUG_FIX
-//#define DIRECTIONAL_FILTER
-//#define E_DAIF      // Enhanced DAIF
-//#define EAIF       // EAIF
-//#define EDAIF2       // Variable Structure AIF
+#define DIRECTIONAL_FILTER
+#define E_DAIF      // Enhanced DAIF
+#define EAIF       // EAIF
+#define EDAIF2       // Variable Structure AIF
 #endif  //  ADAPTIVE_FILTER
 
 // 1/8 pel motion compensation
-//#define EIGHTH_PEL
+#define EIGHTH_PEL
 // Adaptive Prediction Error Coding in Frequency and Spatial Domain
 #define ADAPTIVE_FD_SD_CODING
 // mv competition predictor

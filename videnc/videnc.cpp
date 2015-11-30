@@ -30,6 +30,8 @@ using namespace std;
 #include <string.h>
 
 #include "codeclib.h"
+#include "424_functions.h"
+
 
 void usage() {
     cout << "A simple video codec:" << endl;;
@@ -41,6 +43,8 @@ void usage() {
     cout << "    frames: Number of frames to be encoded (from the first frame)" << endl;
     cout << "    qstep:      Quantization step size (can be floating-point)" << endl;
 }
+
+
 
 //--------------------------------------------------------
 //
@@ -109,6 +113,12 @@ int main(int argc,char **argv) {
     ofsOutfile.write((const char *) &iHeight, sizeof(int));
     ofsOutfile.write((const char *) &iFrames, sizeof(int));
     ofsOutfile.write((const char *) &fQstep, sizeof(float));
+
+	//DAIF testing stuff
+	//InputParameters inputs, *inputs = &inputs;
+	InputParameters inputs;
+	InputParameters *pinputs = &inputs;
+
 
     for (int i = 0; i < iFrames; i++) {
         //read one frame
