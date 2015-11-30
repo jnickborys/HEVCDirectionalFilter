@@ -12,6 +12,7 @@ using namespace std;
 #include "bits.h"
 #include "xform.h"
 #include "quant.h"
+//#include "global.h" //may not need this line
 
 //-----------------------------------
 // ICodec class

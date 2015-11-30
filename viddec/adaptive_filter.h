@@ -31,7 +31,7 @@
 //#ifdef EIGHTH_PEL
 #include "global.h"
 #ifdef EDAIF2
-#include "../../lcommon/inc/aif_common.h" // we collect in a single file defines related to encoder and decoder
+#include "aif_common.h" // we collect in a single file defines related to encoder and decoder
 #endif
 //#endif
 

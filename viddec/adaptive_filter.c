@@ -35,11 +35,11 @@
 #include "global.h" 
 #ifdef DIRECTIONAL_FILTER
 #include <memory.h>
-#include "../../lcommon/inc/adaptive_filter_1DAIF.h"
-#include "../../lcommon/inc/adaptive_filter_orig.h"
+#include "adaptive_filter_1DAIF.h"
+#include "adaptive_filter_orig.h"
 #ifdef EDAIF2
-#include "../../lcommon/inc/const_DAIF.h"
-#include "../../lcommon/inc/const_RAIF.h"
+#include "const_DAIF.h"
+#include "const_RAIF.h"
 #endif
 #endif
 #ifdef EIGHTH_PEL

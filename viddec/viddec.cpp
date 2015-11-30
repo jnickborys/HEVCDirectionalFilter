@@ -21,6 +21,10 @@ using namespace std;
 #include <stdio.h>
 #include <string.h>
 
+//#include "global.h"
+//img_par *img;
+
+
 #include "codeclib.h"
 
 void usage() {
