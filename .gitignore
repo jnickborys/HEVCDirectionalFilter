@@ -53,7 +53,6 @@ viddec/test/
 *.pdf
 
 # Generated files from Visual Studio
-*.vcxproj
 *.opensdf
 *.sdf
 videnc/videnc.vcxproj
