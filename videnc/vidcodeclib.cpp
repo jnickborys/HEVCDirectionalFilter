@@ -13,6 +13,13 @@ using namespace std;
 #include "xform.h"
 #include "quant.h"
 
+extern "C" {
+	#include "adaptive_filter.h"
+	#include "output.h"
+}
+
+//InputParameters inputs, *input = &inputs;
+
 //-----------------------------------
 // ICodec class
 //-----------------------------------
@@ -283,6 +290,10 @@ IEncoder::IEncoder(unsigned w,unsigned h)
 {
   _ace = new ACEncoder();
   _out = new OFlow();
+
+  dpb.init_done = 0;
+  init_dpb();
+  init_out_buffer();
 }
 
 IEncoder::~IEncoder(void)
@@ -386,8 +397,6 @@ int IEncoder::codeImage(
   if (!bIsIFrame) {
       //P frames: motion est, find prediction error
 
-	  //AdaptiveInterpolationFilter();
-
 	  MotionEst();
 
       EncodeMV();
@@ -397,6 +406,8 @@ int IEncoder::codeImage(
 	  //call custom DAIF function here
 	  //pretty sure it is called for P and B frames
 	  //DAIF()
+	  // Added from slice::encode_one_slice
+	  InitAdaptiveFilter(input);
 
   }
 
@@ -599,37 +610,6 @@ int IEncoder::GetSAD(
 }
 
 
-/*
-	Upsamples the Image and the applies a filter
-
-	Image size is increased by 16x
-*/
-void IEncoder::AdaptiveInterpolationFilter()
-{
-	// Upsample by 2
-
-	// apply filter h1
-	// Upsample by 2
-	// apply filter h1
-	// upsample by 4
-	// apply filter h2
-	
-	return ;
-}
-
-void ComputeWienerHopfEqn()
-{
-	// For a 6 Tap Filter
-	for (int t = 0; t < 6; ++t)
-	{
-
-	}
-}
-
-void IEncoder::ComputeFilterCoefficients()
-{
-	return;
-}
 
 //custom DAIF (directional adaptive interpolation filter) function
 void IEncoder::DAIF()
@@ -682,6 +662,7 @@ void IEncoder::DAIF()
 //Save the MV information in a separate file for Matlab to plot.
 void IEncoder::DumpMV(ofstream& DumpFile)
 {
+	#define write write
     DumpFile.write((const char *) m_iMVy[0], _w * _h / MBSIZE / MBSIZE * sizeof(int));
     DumpFile.write((const char *) m_iMVx[0], _w * _h / MBSIZE / MBSIZE * sizeof(int));
 }

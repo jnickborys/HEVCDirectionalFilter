@@ -31,9 +31,11 @@ using namespace std;
 
 #include "codeclib.h"
 
-extern "C" {
-#include "adaptive_filter.h"
-}
+#define ADAPTIVE_FILTER
+
+//extern "C" {
+//#include "adaptive_filter.h"
+//}
 
 
 void usage() {
@@ -69,10 +71,10 @@ int main(int argc,char **argv) {
         return -1;
     }
 
-	    #define  open     open
-        #define  close    close
-        #define  read     read
-        #define  write    write
+	#define  open     open
+    #define  close    close
+    #define  read     read
+    #define  write    write
 
     //open input file
     ifsInfile.open(argv[1], ios::in|ios::binary);
@@ -124,9 +126,6 @@ int main(int argc,char **argv) {
 
 	//DAIF testing stuff
 	//InputParameters inputs, *inputs = &inputs;
-	InputParameters inputs;
-	FreeAdaptiveFilter();
-	//InputParameters *pinputs = &inputs;
 
 
     for (int i = 0; i < iFrames; i++) {
@@ -165,5 +164,7 @@ int main(int argc,char **argv) {
     delete pcImgBuf;
     delete pcBitstreamBuf;
 
-    return 0;
+	//free_picture(frame_pic_aif);
+    
+	return 0;
 }
