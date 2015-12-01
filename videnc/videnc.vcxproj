@@ -121,7 +121,6 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="424_functions.cpp" />
     <ClCompile Include="adaptive_filter.c" />
     <ClCompile Include="adaptive_filter_decision.c" />
     <ClCompile Include="adaptive_loop_filter.c" />
@@ -252,7 +251,6 @@
     <ClInclude Include="fmo.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="header.h" />
-    <ClInclude Include="424_functions.h" />
     <ClInclude Include="image.h" />
     <ClInclude Include="intrarefresh.h" />
     <ClInclude Include="leaky_bucket.h" />

@@ -181,9 +181,6 @@
     <ClCompile Include="weighted_prediction.c">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="424_functions.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="includes">
@@ -361,9 +358,6 @@
     </ClInclude>
     <ClInclude Include="const_RAIF.h">
       <Filter>source</Filter>
-    </ClInclude>
-    <ClInclude Include="424_functions.h">
-      <Filter>includes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
