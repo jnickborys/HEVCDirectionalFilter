@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="viddec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="arith.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bits.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="quant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vidcodeclib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="adaptive_filter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="image.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fmo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="macroblock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mbuffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="output.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="parset.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rtp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nalu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nalucommon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="parsetcommon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="loopFilter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="memalloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mv_competition.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="context_ini.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="annexb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="biaridecod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cabac.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="erc_api.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mb_access.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vlc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="adaptive_loop_filter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="adaptive_quantization.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="block.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cabac64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="erc_do_i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="erc_do_p.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="errorconcealment.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filehandle.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="header.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ldecod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="leaky_bucket.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="macroblock64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nal_part.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sei.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="spatial_domain_coding.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="switched_filters.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transform8x8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptive_filter.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptive_filter_1DAIF.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptive_filter_orig.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptive_loop_filter.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptive_quantization.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aif_common.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="annexb.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="arith.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="biaridecod.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bits.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="block.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cabac.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="codeclib.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="const_DAIF.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="const_RAIF.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="context_ini.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="contributors.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ctx_tables.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="defines.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="elements.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="erc_api.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="erc_do.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="erc_globals.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="errorconcealment.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fmo.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="image.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="leaky_bucket.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="loopfilter.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="macroblock.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mb_access.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mbuffer.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memalloc.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mv_competition.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nalu.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nalucommon.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="output.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="parset.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="parsetcommon.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="quant.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rtp.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sei.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="spatial_domain_coding.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="switched_filters.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="transform8x8.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xform.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

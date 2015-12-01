@@ -44,9 +44,15 @@ Temporary Items
 
 # Ignore the Compiled Binaries
 videnc/Debug/
+videnc/Release/
+viddec/Debug/
+viddec/Release/
+viddec/test/
+
+*.exe
+*.pdf
 
 # Generated files from Visual Studio
-*.vcxproj
 *.opensdf
 *.sdf
 videnc/videnc.vcxproj

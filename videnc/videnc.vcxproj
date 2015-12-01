@@ -24,7 +24,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -122,6 +122,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="adaptive_filter.c" />
+    <ClCompile Include="adaptive_filter_decision.c" />
+    <ClCompile Include="adaptive_loop_filter.c" />
+    <ClCompile Include="adaptive_quantization.c" />
+    <ClCompile Include="annexb.c" />
     <ClCompile Include="arith.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -130,6 +134,7 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <ClCompile Include="biariencode.c" />
     <ClCompile Include="bits.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -138,6 +143,38 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <ClCompile Include="block.c" />
+    <ClCompile Include="cabac.c" />
+    <ClCompile Include="configfile.c" />
+    <ClCompile Include="context_ini.c" />
+    <ClCompile Include="decoder.c" />
+    <ClCompile Include="epzs.c" />
+    <ClCompile Include="explicit_gop.c" />
+    <ClCompile Include="fast_me.c" />
+    <ClCompile Include="filehandle.c" />
+    <ClCompile Include="fmo.c" />
+    <ClCompile Include="header.c" />
+    <ClCompile Include="image.c" />
+    <ClCompile Include="intrarefresh.c" />
+    <ClCompile Include="leaky_bucket.c" />
+    <ClCompile Include="lencod.c" />
+    <ClCompile Include="loopFilter.c" />
+    <ClCompile Include="macroblock.c" />
+    <ClCompile Include="macroblock64.c" />
+    <ClCompile Include="mbuffer.c" />
+    <ClCompile Include="mb_access.c" />
+    <ClCompile Include="memalloc.c" />
+    <ClCompile Include="mode_decision.c" />
+    <ClCompile Include="mode_decision64.c" />
+    <ClCompile Include="mv-search.c" />
+    <ClCompile Include="mv-search64.c" />
+    <ClCompile Include="mv_competition.c" />
+    <ClCompile Include="nal.c" />
+    <ClCompile Include="nalu.c" />
+    <ClCompile Include="nalucommon.c" />
+    <ClCompile Include="output.c" />
+    <ClCompile Include="parset.c" />
+    <ClCompile Include="parsetcommon.c" />
     <ClCompile Include="quant.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -146,6 +183,20 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <ClCompile Include="q_matrix.c" />
+    <ClCompile Include="q_offsets.c" />
+    <ClCompile Include="ratectl.c" />
+    <ClCompile Include="rdopt.c" />
+    <ClCompile Include="rdopt_coding_state.c" />
+    <ClCompile Include="rdpicdecision.c" />
+    <ClCompile Include="refbuf.c" />
+    <ClCompile Include="rtp.c" />
+    <ClCompile Include="sei.c" />
+    <ClCompile Include="simplified_fast_me.c" />
+    <ClCompile Include="slice.c" />
+    <ClCompile Include="spatial_domain_coding.c" />
+    <ClCompile Include="switched_filters.c" />
+    <ClCompile Include="transform8x8.c" />
     <ClCompile Include="vidcodeclib.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -162,6 +213,8 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <ClCompile Include="vlc.c" />
+    <ClCompile Include="weighted_prediction.c" />
     <ClCompile Include="xform.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -173,15 +226,59 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="adaptive_filter.h" />
+    <ClInclude Include="adaptive_filter_1DAIF.h" />
+    <ClInclude Include="adaptive_filter_orig.h" />
+    <ClInclude Include="adaptive_loop_filter.h" />
+    <ClInclude Include="adaptive_quantization.h" />
+    <ClInclude Include="annexb.h" />
     <ClInclude Include="arith.h" />
+    <ClInclude Include="biariencode.h" />
     <ClInclude Include="bits.h" />
+    <ClInclude Include="block.h" />
+    <ClInclude Include="cabac.h" />
     <ClInclude Include="codeclib.h" />
+    <ClInclude Include="configfile.h" />
+    <ClInclude Include="const_DAIF.h" />
+    <ClInclude Include="const_RAIF.h" />
+    <ClInclude Include="context_ini.h" />
+    <ClInclude Include="contributors.h" />
+    <ClInclude Include="ctx_tables.h" />
     <ClInclude Include="defines.h" />
+    <ClInclude Include="elements.h" />
+    <ClInclude Include="epzs.h" />
+    <ClInclude Include="explicit_gop.h" />
+    <ClInclude Include="fast_me.h" />
+    <ClInclude Include="fmo.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="header.h" />
+    <ClInclude Include="image.h" />
+    <ClInclude Include="intrarefresh.h" />
+    <ClInclude Include="leaky_bucket.h" />
+    <ClInclude Include="macroblock.h" />
     <ClInclude Include="mbuffer.h" />
+    <ClInclude Include="mb_access.h" />
     <ClInclude Include="memalloc.h" />
+    <ClInclude Include="minmax.h" />
+    <ClInclude Include="mode_decision.h" />
+    <ClInclude Include="mv-search.h" />
+    <ClInclude Include="mv_competition.h" />
+    <ClInclude Include="nalu.h" />
+    <ClInclude Include="nalucommon.h" />
+    <ClInclude Include="output.h" />
+    <ClInclude Include="parset.h" />
+    <ClInclude Include="parsetcommon.h" />
     <ClInclude Include="quant.h" />
+    <ClInclude Include="q_matrix.h" />
+    <ClInclude Include="q_offsets.h" />
+    <ClInclude Include="ratectl.h" />
+    <ClInclude Include="rdopt_coding_state.h" />
+    <ClInclude Include="refbuf.h" />
+    <ClInclude Include="rtp.h" />
+    <ClInclude Include="sei.h" />
+    <ClInclude Include="simplified_fast_me.h" />
+    <ClInclude Include="spatial_domain_coding.h" />
+    <ClInclude Include="switched_filters.h" />
+    <ClInclude Include="transform8x8.h" />
     <ClInclude Include="vlc.h" />
     <ClInclude Include="xform.h" />
   </ItemGroup>

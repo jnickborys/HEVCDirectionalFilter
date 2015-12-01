@@ -31,6 +31,11 @@ using namespace std;
 
 #include "codeclib.h"
 
+extern "C" {
+#include "adaptive_filter.h"
+}
+
+
 void usage() {
     cout << "A simple video codec:" << endl;;
     cout << "Usage: videnc infile outfile width height frames qstep" << endl;
@@ -41,6 +46,8 @@ void usage() {
     cout << "    frames: Number of frames to be encoded (from the first frame)" << endl;
     cout << "    qstep:      Quantization step size (can be floating-point)" << endl;
 }
+
+
 
 //--------------------------------------------------------
 //
@@ -61,6 +68,11 @@ int main(int argc,char **argv) {
         usage();
         return -1;
     }
+
+	    #define  open     open
+        #define  close    close
+        #define  read     read
+        #define  write    write
 
     //open input file
     ifsInfile.open(argv[1], ios::in|ios::binary);
@@ -109,6 +121,13 @@ int main(int argc,char **argv) {
     ofsOutfile.write((const char *) &iHeight, sizeof(int));
     ofsOutfile.write((const char *) &iFrames, sizeof(int));
     ofsOutfile.write((const char *) &fQstep, sizeof(float));
+
+	//DAIF testing stuff
+	//InputParameters inputs, *inputs = &inputs;
+	InputParameters inputs;
+	FreeAdaptiveFilter();
+	//InputParameters *pinputs = &inputs;
+
 
     for (int i = 0; i < iFrames; i++) {
         //read one frame
